@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+
+}
+
+:root{
+    --head : #EFF0F7;
+}
+.content {
+    width: 100%;
+
+}
+header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    transition: 0.7s;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo{
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(10px 5px 15px rgba(32, 107, 247, 0.774));
+    
+}
+
+header .logo > h1{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    
+}
+header .logo > h5{
+    font-size: small;
+    font-style: oblique;
+    text-align: center;
+    color: #ffffffd7;
+
+}
+
+#menu{
+    display: none;
+}
+
+.content header > label > svg{
+    cursor:pointer;
+    display: none;
+}
+
+header .opciones{
+    display: flex;
+    align-items: center;
+
+}
+
+header .opciones > a{
+    margin-right: 40px;
+    color: rgb(32, 107, 247);
+    font-size: 1.2em;
+    z-index: 1;
+    &:hover{
+        filter: drop-shadow(10px 5px 15px rgb(32, 107, 247));
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Lados{
+    display: flex;
+}
+
+.Lados .space{
+    width: 25vw;
+    background-image: url(../img/Vacio.jpg);
+    background-size: cover;
+}
+/*
+.Lados .space >img{
+    width: 25vw;
+    height: 100vh;
+    object-fit: cover;
+}*/
+
+.Lados .yo{
+    position: fixed;
+    width: 150px;
+    align-items: center;
+}
+
+
+
+.Lados .yo > img{
+
+    width: 150px;
+    border-radius: 500px;
+    margin-left: 12vw;
+    margin-top: 25vh;
+    transition: 0.5s;
+    filter: drop-shadow(-10px 5px 15px rgba(255,255,255,0.774));
+    z-index: 2;
+    &:hover{
+        transform: scale(1.2);
+        filter: drop-shadow(-55px 5px 15px rgba(32, 107, 247, 0.774));
+        cursor: grab;
+
+    }
+}
+.content main .proG{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 0 10%;
+}
+.content main .proG>img{
+    width: 50%;
+}
+
+.content main .titulo{
+    margin-top: 7.2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content main .titulo .Degra{
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.329);
+}
+
+.content main .titulo h1{
+    font-size: 2.8em;
+
+}
+
+
+
+
+.content main .experiencia > h3{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.content main .experiencia div {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.content main .experiencia div > svg{
+    width: 100px;
+    height: 100px;
+}
+/*
+.content main .experiencia .Front{
+    display: flex;
+    justify-content: center;
+}
+
+.content main .experiencia .Front > svg{
+    width: 100px;
+    height: 100px;
+}
+
+.content main .experiencia .Back{
+    display: flex;
+    justify-content: center;
+}
+.content main .experiencia .Back > svg{
+    width: 90px;
+    height: 90px;
+}
+
+*/
+main .acerca{
+    display: flex;
+    flex-direction: column;
+}
+
+main .acerca h1 , main .servicios h1, main .Contacto h1{
+    text-align: center;
+    margin-top: 30px;
+}
+
+main .acerca p{
+    margin: 0 10%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+main .Contacto{
+    display: flex;
+    flex-direction: column;
+    
+}
+main .Contacto .Redes{
+    display: flex;
+    justify-content: center;
+}
+
+main .Contacto .Redes a svg{
+    width: 50px;
+    height: 50px;
+    margin: auto 10px;
+    color: #ffffff;
+}
+
+
+
+@media(max-width:560px){
+    .space header .logo h1, .space header .logo h5{
+        font-size:0.7em;
+        margin-right: 10px;
+    }
+    .content header{
+        justify-content: right;
+    }
+    
+    .content header label>svg{
+        display: initial;
+        z-index: 4;
+    }
+    .content header .opciones{
+       position: absolute;      
+       top: 60px;
+       background-image: url(../img/Vacio.jpg);
+       width: 100%;
+       height: auto;
+       display: none;
+       z-index: 1;
+    }
+
+    .content header .opciones > a{
+        width: 100%;
+        text-align: center;
+        margin: 50px auto;
+        color: #ffffff;
+        z-index: 4;
+        &:hover{
+            filter: drop-shadow(10px 5px 15px rgb(255, 255, 255));
+            color: #adadad;
+        }
+    }
+
+    #menu:checked~ .opciones{
+        display: flex;
+        flex-direction: column;
+    }
+    .content main .titulo .Degra{
+        font-size: 1.5em;
+        text-align: left;
+
+    }
+    .content main .titulo > h1{
+        font-size: 2em;
+        margin-left: 0px;
+
+    }
+
+
+
+    .content main .experiencia div{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        right: 110px;
+    }
+    
+    .Lados .yo{
+        display: flex;
+        position: absolute;
+    }
+    .Lados .yo img{
+        margin-left: 30px;
+    }
+    
+
+
+
+
+
+
+
+
+    
+}
